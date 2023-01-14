@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export CODE="code --no-sandbox --user-data-dir . --install-extension"
+
+$CODE Orta.vscode-jest
+$CODE rbbit.typescript-hero
+$CODE ms-vscode.vscode-typescript-next
+$CODE ms-vsliveshare.vsliveshare
+$CODE bmewburn.vscode-intelephense-client
+$CODE qezhu.gitlink
+$CODE eamodio.gitlens
+$CODE GitHub.copilot
+$CODE ms-azuretools.vscode-docker
+$CODE ms-vscode-remote.remote-containers
+#$CODE ms-dotnettools.csharp
+
+
+DISPLAY=host.docker.internal:0 code --no-sandbox
+
+while true; do sleep 30; done;
