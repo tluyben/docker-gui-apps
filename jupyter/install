@@ -1,0 +1,16 @@
+#!/bin/bash
+
+apt-get update
+apt-get install -y wget gpg xterm software-properties-common python3 pip firefox-esr 
+pip install jupyterlab 
+pip install notebook 
+pip install voila
+
+adduser --disabled-password --gecos "" jupyter
+mv runjupyter /home/jupyter/
+mkdir /home/jupyter/notebooks
+chown -R jupyter.jupyter /home/jupyter
+
+su - jupyter -c "cd /home/jupyter; ./runjupyter"
+echo "hanging in ./install"
+while true; do sleep 30; done;
