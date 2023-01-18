@@ -5,7 +5,7 @@ add-apt-repository ppa:saiarcot895/chromium-beta -y
 
 apt-get update
 sudo apt remove chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra -y
-apt-get install -y wget gpg xterm software-properties-common python3 pip chromium-browser vim
+apt-get install -y wget gpg xterm software-properties-common python3 pip chromium-browser vim rustc cargo
 
 # install the jupyter assets
 pip install jupyterlab 
@@ -19,8 +19,7 @@ pip install pandas
 # install the LLM tools 
 pip install langchain
 pip install openai
-pip install setuptools_rust
-#pip install gpt-index
+pip install gpt-index
 
 adduser --disabled-password --gecos "" jupyter
 mv runjupyter /home/jupyter/
