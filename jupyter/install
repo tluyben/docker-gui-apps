@@ -2,9 +2,22 @@
 
 apt-get update
 apt-get install -y wget gpg xterm software-properties-common python3 pip firefox-esr 
+
+# install the jupyter assets
 pip install jupyterlab 
 pip install notebook 
 pip install voila
+
+# machine learning tooling
+pip install torch torchvision
+pip install pandas
+
+# install the LLM tools 
+pip install langchain
+pip install openai
+pip install gpt-index
+
+
 
 adduser --disabled-password --gecos "" jupyter
 mv runjupyter /home/jupyter/
